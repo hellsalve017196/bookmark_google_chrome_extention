@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+<head>
+    <title>Sync BookMark</title>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    
+    <div class="content" ui-view>
+    </div>
+
+    <!--    templates    -->
+
+    <!-- set username -->
+
+    <script type="text/ng-template" id="login.html">
+        <div class="col-12">
+            set username : <input type="text" class="form-control" ng-model="user"></input>
+            <button class="btn btn-primary btn-block" ng-click="get_in()">Go</button>
+        </div>
+    </script>
+
+    <!-- set username -->
+
+
+
+    <!-- sync url -->
+
+    <script type="text/ng-template" id="sync.html">
+        <div class="col-12">
+            <div class="alert alert-success" ng-if="flag">
+                <strong>{{ flag }}</strong>
+            </div>
+            <br>
+            <!-- <button class="btn btn-primary btn-block">Add to Bookmark</button> -->
+            <button ng-click="syncUrl()" class="btn btn-warning btn-block">Sync</button>
+            <button ng-click="retrive_bookmarks()" class="btn btn-success btn-block">Retrive</button>
+        </div>
+    </script>
+
+    <!-- sync url -->
+
+
+
+    <!--    templates    -->
+
+
+
+    <script type="text/javascript" src="lib/jquery/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="lib/angular/angular.js"></script>
+    <script type="text/javascript" src="lib/firebase/firebase.js"></script>
+    <script type="text/javascript" src="lib/firebase/angularfire.min.js"></script>
+    <script type="text/javascript" src="lib/angular/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/routes.js"></script>
+    <script type="text/javascript" src="app/controllers.js"></script>
+    <script type="text/javascript" src="app/services.js"></script>
+
+</body>
+</html>

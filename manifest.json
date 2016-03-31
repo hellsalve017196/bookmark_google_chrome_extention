@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name"            : "Bookmark",
+  "description"     : "Sync your bookmarks",
+  "short_name"      : "bookmark",
+  "version"         : "0.1",
+  // works in the front
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_icon" : "images/bookmark.png"
+  },
+  // works in the background
+  "background" : {
+    "page" : "back_page.html"
+    },
+  "permissions": [
+    "debugger",
+    "bookmarks",
+    "tabs"
+  ],
+  "content_security_policy": "script-src 'self' https://cdn.firebase.com https://*.firebaseio.com; object-src 'self'"
+}
