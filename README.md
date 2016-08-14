@@ -13,6 +13,8 @@ nano app/controllers.js
 go to line 20:
 ref = new Firebase('https://urlamammia.firebaseio.com/'+localStorage.getItem("user"));
 
-give your firebaseapp url
+replace with your firebaseapp url
+
+ref = new Firebase('https://your_app_url/'+localStorage.getItem("user"));
 
 ```
