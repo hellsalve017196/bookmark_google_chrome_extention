@@ -17,4 +17,9 @@ replace with your firebaseapp url
 
 ref = new Firebase('https://your_app_url/'+localStorage.getItem("user"));
 
+open chrome,
+then go to chrome://extensions/
+then choose load unpack extension
+choose save_bookmarks folder
+
 ```
